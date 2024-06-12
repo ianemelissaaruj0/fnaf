@@ -1,0 +1,358 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-01: #000;
+  --color-02: #212121;
+  --color-03: white;
+}
+
+#backgroundindex {
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.788) 150%,
+      rgba(8, 8, 8, 0.719) 160%),
+    url("https://i.pinimg.com/564x/95/c4/92/95c49218f24f03c0fc191f1bae284c2f.jpg") no-repeat center center;
+  background-size: 100%;
+  background-color: #000;
+}
+
+.cabecalho {
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 5%;
+  backdrop-filter: blur(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.cabecalho .menu ul {
+  display: flex;
+}
+
+.cabecalho .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cabecalho .menu li {
+  list-style: none;
+}
+
+.cabecalho .menu a {
+  color: var(--color-03);
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+}
+
+.cabecalho .menu a:hover {
+  color: var(--color-01);
+  background-color: rgba(255, 255, 255, 0.63);
+  transition: all 0.4s linear;
+}
+
+.cabecalho .menu li .submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--color-01);
+}
+
+.cabecalho .menu li:hover .submenu {
+  display: block;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Boogaloo&display=swap");
+
+/* INDEX */
+
+#textindex {
+  font-family: "Boogaloo";
+  font-size: 28px;
+  color: hsl(0,
+      0%,
+      100%);
+  text-shadow: 2px 10px 5px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  text-align: center;
+  margin-top: 20%;
+}
+
+/* INDEX */
+
+/* LIVROS */
+
+.backgroundlivros {
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.422) 55%,
+      rgba(255, 255, 255, 0) 100%), url(../imagens/fundo_spt.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.segurarconteiner {
+  margin-top: 10%;
+  margin-bottom: 9%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.container-livro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.livro {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+img {
+  max-width: 100px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 0, 0, 0.473);
+
+}
+
+h1 {
+  font-size: 48px;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 5px white, 0 0 10px white;
+}
+
+.livro p,
+h1 {
+  margin-top: 5px;
+  color: #fff;
+  margin-right: 5%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+img {
+  max-width: 264px;
+  height: auto;
+
+}
+
+.livro img,
+.livro-texto {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container-livro.animated {
+  opacity: 1;
+}
+
+.container-livro.animated .livro img {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+.container-livro.animated .livro-texto {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 1s;
+}
+
+/* LIVROS */
+
+/* jogos */
+
+
+#backgroundjogos {
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.815) 845%,
+      rgba(0, 0, 0, 0.692) 100%), url(https://i.pinimg.com/564x/4c/af/b5/4cafb5c08a309fd6b40995e7643b7289.jpg) no-repeat center center;
+  background-size: 100%;
+
+}
+
+#fotos .container {
+
+  margin: 10%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+#fotos .container img {
+  width: 100%;
+  transition: all 0.2s linear;
+}
+
+#fotos .container img:hover {
+  transform: scale(75%);
+}
+
+/* jogos */
+
+/* DEV */
+
+#backgrounddev {
+  background: no-repeat linear-gradient(0deg,
+      rgba(0, 0, 0, 0.422) 155%,
+      rgba(255, 255, 255, 0) 100%),
+    url(../imagens/fundo_dev.jpg);
+}
+
+.card {
+  width: 30em;
+  height: 30.5em;
+  background: #000000;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%,
+      100% 0,
+      100% calc(100% - 30px),
+      calc(100% - 30px) 100%,
+      0 100%,
+      0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 33%;
+  margin-top: 8%;
+
+}
+
+.card span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+
+}
+
+.card .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+  margin-bottom: 10px;
+  line-height: 15px;
+
+}
+
+.card #img {
+  width: 250px;
+  height: 250px;
+  background-image: url(../imagens/perfil_dev2.PNG);
+  background-size: cover;
+  border-radius: 15px;
+  margin: auto;
+
+}
+
+.card .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 20px;
+
+}
+
+.card a {
+  color: white;
+  transition: 0.4s ease-in-out;
+}
+
+.card a:hover {
+  color: red;
+}
+
+.card button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: 0.4s ease-in-out;
+
+}
+
+.card button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+
+}
+
+/* DEV */
+
+/* VIDEOS */
+
+#backgroundvideos {
+  background: linear-gradient(0deg,
+      rgba(0, 0, 0, 0.422) 55%,
+      rgba(255, 255, 255, 0) 100%), url(../imagens/fundo_video2.jpg);
+}
+
+#videos .container {
+  margin: 5%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 5%;
+}
+
+/* VIDEOS */
+
+.rodape {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  margin-top: 25%;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 85px;
+}
+
+.rodape a {
+  color: var(--color-03);
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
+  transition: all 0.3s;
+}
+
+#rodapedev {
+
+  margin-top: 10%;
+
+}
